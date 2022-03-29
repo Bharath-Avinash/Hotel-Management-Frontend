@@ -1,0 +1,61 @@
+<div class="header">
+    <div class="center">
+      <h1 class="nav" style="background-color:#7ad7f0; color:#987554">
+        🇼‌🇪‌🇱‌🇨‌🇴‌🇲‌🇪‌ 🇹‌🇴‌ 🇭‌🇴‌🇸‌🇵‌🇮‌🇹‌🇦‌🇱‌ 🇸‌🇪‌🇷‌🇻‌🇮‌🇨‌🇪‌🇸‌
+      </h1>
+    </div>
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link active"  aria-current="page" routerLink="/home">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/docters">Doctors</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/patients">Patients</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/New-Doctor">Add Doctor</a>
+      </li>
+    </ul>
+  </div>
+  
+  <img src="assets/leapfrog-anniversary-bg.jpg" style="width:100%">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="text-center">
+            <h1>New Doctor Sign Up</h1>
+          </div>
+          <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+            <div class="mb-3">
+              <div class="mb-3">
+                <label for="exampleInputName" class="form-label">Doctor Name</label>
+                <input formControlName="name" type="text" class="form-control" id="exampleInputName">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputAge" class="form-label">Age</label>
+                <input formControlName="age" type="number" class="form-control" id="exampleInputAge">
+              </div>
+              <label for="exampleInputgender" class="form-label">Gender</label>
+              <input formControlName="gender" type="txt" class="form-control" id="exampleInputGender" >
+              
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputSpecialization" class="form-label">Specialization Field</label>
+                <input formControlName="specialistField" type="text" class="form-control" id="exampleInputSpecialization">
+              </div>
+            
+            <div class="mb-3">
+              <label for="exampleInputNumberOfPatient" class="form-label">Number of Patient Visited</label>
+              <input formControlName="numberOfPatientAttended" type="number" class="form-control" id="exampleInputNumberOfPatient">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Signup</button>
+          </form>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,75 @@
+<div class="header">
+
+  
+<div class="center">
+  <h1 class="nav" style="background-color:#7ad7f0; color:#987554">
+    🇼‌🇪‌🇱‌🇨‌🇴‌🇲‌🇪‌ 🇹‌🇴‌ 🇭‌🇴‌🇸‌🇵‌🇮‌🇹‌🇦‌🇱‌ 🇸‌🇪‌🇷‌🇻‌🇮‌🇨‌🇪‌🇸‌
+  </h1>
+</div>
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link active"  aria-current="page" routerLink="/home">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/docters">Doctors</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/patients">Patients</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/New-Doctor">Add Doctor</a>
+  </li>
+</ul>
+
+ 
+          
+<!-- <select [(ngModel)]="doc">
+  <option *ngFor="let person of docArray" [ngValue]="person">{{person.name}}</option>
+</select> -->
+
+
+<form [formGroup]="form" (ngSubmit)="submit()">  
+             
+  <div class="form-group">  
+      <label for="doctor" style="color: black;">Select the Doctor name for Information</label>  
+      <select formControlName="doctor" class="form-control">  
+            
+          <option *ngFor="let doct of docArray" [ngValue]="doct">{{doct.name}}</option>  
+      </select>  
+      
+  </div>  
+   
+  <button class="btn btn-primary" type="submit" [disabled]="!form.valid">Submit</button>  
+</form>
+<div class = "container">
+  <div class = "row col-lg-12 col-sm-12">
+      <table class = "table table-striped">
+          <thead>
+              <tr>
+                  <th>Doctors_Name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Specialist_field</th>
+                  <th>Number Of Patient Attened</th>
+                  
+                  
+                  
+              </tr>
+          </thead>
+          <tbody>
+              <tr >
+                  <td>{{doc.name}}</td>
+                  <td>{{doc.age}}</td>
+                  <td>{{doc.gender}}</td>
+                  <td>{{doc.specialistField}}</td>
+                  <td>{{doc.numberOfPatientAttended}}</td>
+                  <button class = "btn btn-danger" (click) = "removeUser(doc)">Delete</button>
+                
+                  
+                 
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>
+

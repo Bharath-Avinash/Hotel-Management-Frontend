@@ -1,0 +1,61 @@
+<div class="header">
+  <div class="center">
+    <h1 class="nav" style="background-color:#7ad7f0; color:#987554">
+      🇼‌🇪‌🇱‌🇨‌🇴‌🇲‌🇪‌ 🇹‌🇴‌ 🇭‌🇴‌🇸‌🇵‌🇮‌🇹‌🇦‌🇱‌ 🇸‌🇪‌🇷‌🇻‌🇮‌🇨‌🇪‌🇸‌
+    </h1>
+  </div>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active"  aria-current="page" routerLink="/home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/docters">Doctors</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/patients">Patients</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/New-Doctor">Add Doctor</a>
+    </li>
+  </ul>
+</div>
+
+<img src="assets/leapfrog-anniversary-bg.jpg" style="width:100%">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="text-center">
+          <h1>Sign Up</h1>
+        </div>
+        <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+          <div class="mb-3">
+            <div class="mb-3">
+              <label for="exampleInputName" class="form-label">Patient Name</label>
+              <input formControlName="patientName" type="text" class="form-control" id="exampleInputName">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputAge" class="form-label">Age</label>
+              <input formControlName="age" type="number" class="form-control" id="exampleInputAge">
+            </div>
+            <label for="exampleInputgender" class="form-label">Gender</label>
+            <input formControlName="gender" type="txt" class="form-control" id="exampleInputGender" >
+            
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Visited Docotor</label>
+            <select formControlName="visitedDoctor">
+              <option *ngFor="let person of docArray" [ngValue]="person">{{person.name}}</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputDate" class="form-label">Visiting Date</label>
+            <input formControlName="dateOfVisit" type="date" class="form-control" id="exampleInputDate">
+          </div>
+          <button type="submit" class="btn btn-primary mb-2">Signup</button>
+        </form>
+        
+      </div>
+    </div>
+  </div>
+</div>

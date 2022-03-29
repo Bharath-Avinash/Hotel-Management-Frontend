@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+
+body{
+
+    background-color: pink;
+}
+
+.form-group label {
+    color: grey;
+  }
+  .form-group input {
+    font-weight: 500;
+  }
+  .form-group input::placehołder {
+    color: I#c0bdbd;
+    font-weight: 300;
+  }
+  thead th{
+    font-weight: 400;
+  }
+  table tbody tr:hover {
+    background-color: I#fffbf2;
+    cursor: pointer;
+  }
+  /*for invalid form controls*/
+  input.invalid {
+    border-color: red;}

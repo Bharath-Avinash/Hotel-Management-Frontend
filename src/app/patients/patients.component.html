@@ -1,0 +1,72 @@
+<div class="header">
+
+  
+  <div class="center">
+    <h1 class="nav" style="background-color:#7ad7f0; color:#987554">
+      🇼‌🇪‌🇱‌🇨‌🇴‌🇲‌🇪‌ 🇹‌🇴‌ 🇭‌🇴‌🇸‌🇵‌🇮‌🇹‌🇦‌🇱‌ 🇸‌🇪‌🇷‌🇻‌🇮‌🇨‌🇪‌🇸‌
+    </h1>
+  </div>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active"  aria-current="page" routerLink="/home">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/docters">Doctors</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/patients">Patients</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/New-Doctor">Add Doctor</a>
+    </li>
+  </ul>
+  </div>
+  <div class = "container">
+    <div class="row">
+      <div class="col-lg-9 col-sm-12 mt-5">
+          <input type="text" placeholder="enter PatientId" class="form-control" name="patientid" #patientid>
+      </div>
+      <div class="col-lg-3 col-sm-12 mt-5">
+          <button type="button" class="btn btn-info" (click) = "findPatientByPatientId(patientid.value)">Search</button>
+      </div>
+  </div>
+
+   
+
+
+    <div class = "row col-lg-12 col-sm-12">
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                  <th>Patient_Id</th>
+                    <th>Patient_Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Visited_Doctor</th>
+                    <th>Date_Of_Visit</th>
+                    <th>Prescription</th>
+                    
+                    
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr >
+                    <td>{{patient.patientId}}</td>
+                    <td>{{patient.patientName}}</td>
+                    <td>{{patient.age}}</td>
+                    <td>{{patient.gender}}</td>
+                    <td>{{patient.visitedDoctor.name}}</td>
+                    <td>{{patient.dateOfVisit}}</td>
+                    <td>{{patient.prescription}}</td>
+                   
+                  
+                    
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
+  
+  
